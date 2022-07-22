@@ -48,9 +48,25 @@
 
   ];
 
+  const shuffledquestions = questions.sort(() => 0.5 - Math.random());
+
+  function createQuiz() {
+    let currentQuiz = shuffledquestions[quizCount];
+    questionEl.innerHTML = currentQuiz.question;
+  
+    answerContEl.innerHTML = ``;
+  
+    currentQuiz.choices
+      .sort(() => 0.5 - Math.random())
+      .forEach((choice) => {
+        createQuizChoices(choice);
+      });
+  }
+  
   let questionIndex,
     currentQuestion,
     score,
+    wrong,
     timeSpent,
     quizTimer,
     questionIsAnswered,
@@ -64,17 +80,23 @@
     currentQuestion = 1;
     questionIsAnswered = 0;
     score = 0;
+    wrong = 0;
     timeSpent = "00:00";
 
-    quiz.innerHTML = `<div id="progress-container"><span id="progress"></span></div>
+    quiz.innerHTML = `
     <div id="stats">
-    <p>الاسئلة: <span id="questionNumber">${currentQuestion}/${
+    <p> Q : <span id="questionNumber">${currentQuestion}/${
       questions.length
     }</span></p>
-    <p>الإجابات الصحيحة: <span id="score">${score}</span></p>
-    <p>الوقت المستغرق: <span id="timer">00:00</span></p>
+    <p> correct : <span class="score" id="score">${score}</span></p>
+    <p> Wrong : <span class="wrong" id="wrong">${wrong}</span></p>
+
+    <p> Time <span id="timer">00:00</span></p>
     </div>
-    <section id="answers"></section>`;
+    <div id="progress-container"><span id="progress"></span></div>
+    <section id="answers"></section>
+    
+    `;
 
     displayQuestion();
     startTimer();
@@ -196,6 +218,7 @@
       message.textContent = " !إجابة صحيحة";
       label.classList.add("green-bg");
     } else {
+      wrong++;
       message.textContent = "!إجابة خاطئة";
       label.classList.add("red-bg");
 
@@ -228,6 +251,8 @@
     answers.forEach(answer => (answer.disabled = "disabled"));
 
     document.getElementById("score").textContent = score;
+    document.getElementById("wrong").textContent = wrong;
+
   }
 
   let scorePercentage = () => (score / questions.length * 100).toFixed(0);

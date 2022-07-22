@@ -1,50 +1,57 @@
-let classroom = document.querySelector("#classroom");
-let sub3 = document.querySelector("#sub3");
-let main3 = document.querySelector("#main3");
-let geology = document.querySelector("#geology");
-let biology3 = document.querySelector("#biology3");
+/*
+m4mohaiman.github.io
+*/
+function updateTimer(deadline) {
+    var time = deadline - new Date();
+    return {
+        'days': Math.floor(time / (1000 * 60 * 60 * 24)),
+        'hours': Math.floor((time / (1000 * 60 * 60)) % 24),
+        'minutes': Math.floor((time / 1000 / 60) % 60),
+        'seconds': Math.floor((time / 1000) % 60),
+        'total': time
+    };
+}
+
+
+function animateClock(span) {
+    span.className = "flip";
+    setTimeout(function() {
+        span.className = "";
+    }, 700);
+}
 
 
 
 
-let qu = document.querySelector("#qu");
-let qu2 = document.querySelector("#qu2");
+function startTimer(id, deadline) {
+    var timerInterval = setInterval(function() {
+        var clock = document.getElementById(id);
+        var timer = updateTimer(deadline);
 
-let les = document.querySelector("#les");
-let les2 = document.querySelector("#les2");
+        clock.innerHTML = '<span>' + timer.days + '</span>' +
+            '<span>' + timer.hours + '</span>' +
+            '<span>' + timer.minutes + '</span>' +
+            '<span>' + timer.seconds + '</span>';
 
+        //animation
+        var spans = clock.getElementsByTagName("span");
+        animateClock(spans[3]);
+        if (timer.seconds == 59) animateClock(spans[2]);
+        if (timer.minutes == 59 && timer.seconds == 59) animateClock(spans[1]);
+        if (timer.hours == 23 && timer.minutes == 59 && timer.seconds == 59) animateClock(spans[0]);
 
+        //check for end of time
 
-let three = document.querySelector("#three");
-let lessongeology = document.querySelector("#lessongeology");
+        if (timer.total < 1) {
+            clearInterval(timerInterval);
+            clock.innerHTML = '<span>0</span><span>0</span><span>0</span><span>0</span>';
+        }
+    }, 1000);
+}
 
-three.addEventListener("click",() => {
-    classroom.style.display = "none";
-    sub3.style.display = "block";
+window.onload = function() {
 
-});
+    var deadline = new Date("august 1, 2022 18:00:00");
+    startTimer("clock", deadline);
 
-geology.addEventListener("click",() => {
-    sub3.style.display = "none";
-    lessongeology.style.display = "block";
-
-});
-
-biology3.addEventListener("click",() => {
-    sub3.style.display = "none";
-    lessongeology3.style.display = "block";
-
-});
-
-
-les.addEventListener("click",() => {
-    main3.style.display = "none";
-    qu.style.display = "block";
-
-});
-
-les2.addEventListener("click",() => {
-    main3.style.display = "none";
-    qu2.style.display = "block";
-
-});
+};

@@ -3,75 +3,46 @@
 
   let questions = [
     {
-      question: "أكبر فترات السلم الجيولوجي زمنياً",
-      answers: ["الحقب ", " الزمن", " الدهر", " العصر"],
-      correctAnswer: 3
-    },
-    {
-      question: "أقصر فترات السام الچيولوچي عمراً",
-      answers: [" الحقب", "الزمن ", "العصر ", "الدهر "],
+      question: "   أي العبارات الآتية لا تنطبق مع عملية الإخراج في النبات ؟       ",
+      answers: [" طبقة الكيوتين التي تغطى البشرة لا تمنع النتح      ", " معدل الإخراج لا يرتبط بمعدل الهدم      ", "فتحات الثغور المائية مفتوحة طوال العام      ", " ثغور الورقة تفتح وتغلق خلال اليوم      "],
       correctAnswer: 2
     },
     {
-      question: "أربعة بليون سنة تمثل تقريباً عمر",
-      answers: [" الأرض", " الكريبتوزي", "الفانيروزي", "الهاديان "],
-      correctAnswer: 2
-    },
-    {
-      question: "تمكن العلماء من تحديد تاريخ نشأة الأرض عن طريق تحلل العناصر",
-      answers: [" الفلزية", "اللافلزية ", "المشعة ", "الخاملة "],
-      correctAnswer: 3
-    },
-    {
-      question: "الحفرية التي تتوقع تواجدها في طبقة من الحجر الجيري ويرجع ترسيبها للعصر الترياسي في حفرية",
-      answers: ["النيموليت ", "الأمونيتات ", " السمكة العظمية", " الطائر البدائى"],
-      correctAnswer: 2
-    },
-    {
-      question: "النيموليت من الحفريات المميزة لحقب",
-      answers: ["الحياة القديمة", "الحياة المتوسطة", "الحياة الحديثة", "البروتيرزوي "],
-      correctAnswer: 3
-    },
-    {
-      question: "الكائنات التي بدأت الظهور فى حقب الأركى هي الكائنات",
-      answers: [" متعددة الخلايا", " الأولية", "الهيكلية", " الزاحفة"],
-      correctAnswer: 2
-    },
-    {
-      question: "سبب عدم وجود السجل الچيولوچي كاملاً فى أى منطقة",
-      answers: [" وجود طيات محدبة", " وجود أسطح عدم التوافق", "حدوث حركات بانية للجبال", " انقراض الزواحف العملاقة"],
-      correctAnswer: 2
-    },
-    {
-      question: "العصر الذى لم تتواجد فيه زواحف مما يلي هو العصر",
-      answers: [" الديفونى", " البرمى", "الترياسى ", " الجوراسى"],
-      correctAnswer: 1
-    },
-    {
-      question: "يبلغ عمر الصخور التي تحتوى على أول كائنات هيكلية حوالى",
-      answers: [" ٤٠٠٠ مليون سنة", " ٥٤٢ مليون سنة", " ٢٠٠٠ مليون سنة", "٨٧٠ مليون سنة "],
-      correctAnswer: 2
-    },
-    {
-      question: "وجود حفرية لأقدم طائر على الأرض فى صخر يدل على أن هذا الصخر تكون فى العصر",
-      answers: ["الكمبرى ", "السيلورى ", "الترياسى ", "الجوراسى "],
+      question: "يتميز ماء النتج عن ماء الإدماع بجميع ما يلي ماعدا      ",
+      answers: [" ماء خال من أي مواد       ", "  يخرج بكميات كبيرة      ", "يخرج من الثغور في صورة بخار      ", " لا يتحكم النبات في خروجه      "],
       correctAnswer: 4
     },
     {
-      question: "الحقب التى يتميز بسيادة وتنوع اللافقاريات هو حقب",
-      answers: [" الحياة القديمة", " الهاديان", " الحياة المتوسطة", "الحياة الحديثة "],
-      correctAnswer: 1
+      question: "يمكن أن يخرج الماء الزائد في النباتات العشبية من خلال جميع ما يلي ماعدا      ",
+      answers: [" النتح الثغري      ", " النتح العديسي       ", "النتح الكيوتيني      ", "الإدماع  "],
+      correctAnswer: 2
     },
     {
-      question: "مجموعة الحفريات التي لم تظهر لأول مرة فى حقب الحياة المتوسطة هي",
-      answers: [" الأمونيتات والطيور البدائية والنباتات الزهرية", "الزواحف المائية والثديات صغيرة الحجم والسمكة العظمية", "الزواحف الهوائية والزواحف العملاقة والثدييات المشيمية", "الطحالب الخضراء وثلاثية الفصوص والنيموليت "],
+      question: "جميع العوامل التالية يمكن أن تسبب زيادة معدل النتح في النبات ماعدا      ",
+      answers: [" زيادة شدة الضوء      ", " فتح الثغور      ", "ارتفاع درجة الحرارة      ", "  ارتفاع نسبة رطوبة الجو"],
       correctAnswer: 4
-    }
-
+    },
+    {
+      question: "أي مما يلى يحتوى على أقل محتوی مائی داخل النبات ؟      ",
+      answers: [" أوعية الخشب في الجذور      ", "  أوعية الخشب في الساق      ", "الغرف الهوائية في الورقة      ", " جدران خلايا الورقة "],
+      correctAnswer: 3
+    },
+    {
+      question: "عند نقل نبات نام من مكان مظلم إلى مكان مشمس دافئ      ",
+      answers: [" يزداد معدل البناء الضوئي ويقل معدل النتح      ", " يقل معدل البناء الضوئي ويزداد معدل النتح      ", "يقل معدل البناء الضوئي ومعدل النتح      ", " يزداد معدل البناء الضوئي ومعدل النتح      "],
+      correctAnswer: 4
+    },
+    {
+      question: "      أي العبارات التالية يتعارض حدوثها عند غياب الجيوب الهوائية من أوراق نبات الفول ؟       ",
+      answers: [" يتوقف النبات عن النتح الثغرى      ", " ترتفع درجة حرارة النبات مما يضر بالبروتوبلاست      ", "يتوقف ارتفاع الماء والأملاح إلى الأوراق      ", " يتوقف النبات عن النتح الكيوتيني "],
+      correctAnswer: 4
+    },
+    {
+      question: "عند غمس أوراق نبات نام معرض للضوء في زيت بارافين، فإن النتح عن طريق الثغور       ",
+      answers: [" يقل ", "  يزداد ", "لا يتأثر      ", " ينعدم "],
+      correctAnswer: 4
+    },
     
-    
-    
-
   ];
 
   const shuffledquestions = questions.sort(() => 0.5 - Math.random());
@@ -92,7 +63,6 @@
   let questionIndex,
     currentQuestion,
     score,
-    wrong,
     timeSpent,
     quizTimer,
     questionIsAnswered,
@@ -106,23 +76,17 @@
     currentQuestion = 1;
     questionIsAnswered = 0;
     score = 0;
-    wrong = 0;
     timeSpent = "00:00";
 
-    quiz.innerHTML = `
+    quiz.innerHTML = `<div id="progress-container"><span id="progress"></span></div>
     <div id="stats">
-    <p> Q : <span id="questionNumber">${currentQuestion}/${
+    <p>الاسئلة: <span id="questionNumber">${currentQuestion}/${
       questions.length
     }</span></p>
-    <p> correct : <span class="score" id="score">${score}</span></p>
-    <p> Wrong : <span class="wrong" id="wrong">${wrong}</span></p>
-
-    <p> Time <span id="timer">00:00</span></p>
+    <p>الإجابات الصحيحة: <span id="score">${score}</span></p>
+    <p>الوقت المستغرق: <span id="timer">00:00</span></p>
     </div>
-    <div id="progress-container"><span id="progress"></span></div>
-    <section id="answers"></section>
-    
-    `;
+    <section id="answers"></section>`;
 
     displayQuestion();
     startTimer();
@@ -244,7 +208,6 @@
       message.textContent = " !إجابة صحيحة";
       label.classList.add("green-bg");
     } else {
-      wrong++;
       message.textContent = "!إجابة خاطئة";
       label.classList.add("red-bg");
 
@@ -277,8 +240,6 @@
     answers.forEach(answer => (answer.disabled = "disabled"));
 
     document.getElementById("score").textContent = score;
-    document.getElementById("wrong").textContent = wrong;
-
   }
 
   let scorePercentage = () => (score / questions.length * 100).toFixed(0);
