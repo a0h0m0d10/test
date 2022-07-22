@@ -33,11 +33,11 @@ body
   width: 90%;
   margin-right: auto;
   margin-left: auto;
-  min-height: 80%;
+ 
   /*background-color: #fff;*/
   border-radius: 10px;
   padding: 30px;
-  text-align: right;
+  
   box-shadow: #1f83f2;
   justify-content: center;
   align-items: center;
